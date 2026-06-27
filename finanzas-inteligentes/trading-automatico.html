@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Automático con IA: Guía Completa 2026 - Finanzas Inteligentes</title>
+  <meta name="description" content="Guía definitiva de trading automático y algorítmico. Aprende a crear bots de trading con Python, inteligencia artificial, machine learning, plataformas MetaTrader, 3Commas. Estrategias automatizadas rentables para forex, cripto e índices sintéticos.">
+  <meta name="keywords" content="trading automático, bots de trading, trading algorítmico, MetaTrader, 3Commas, Python trading, IA trading, machine learning trading, grid trading, DCA bot">
+  <link rel="canonical" href="https://finanzasinteligentes.com/trading-automatico.html">
+  <meta property="og:title" content="Trading Automático con IA: Guía Completa 2026">
+  <meta property="og:description" content="Guía definitiva de trading automático y algorítmico. Aprende a crear bots de trading con Python, inteligencia artificial y machine learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <span><i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> Colombia y Latinoamérica</span>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+  </div>  <!-- Live Ticker Bar -->
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <a href="./" class="logo"><div class="logo-icon"><i class="fas fa-chart-line"></i></div><div>Finanzas <span>Inteligentes</span><small>Tu guía financiera</small></div></a>
+      <nav class="nav">
+        <a href="./">Inicio</a>
+        <div class="nav-item"><a href="#">Finanzas <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+          <div class="dropdown-menu">
+            <a href="blog/criptomonedas.html">Criptomonedas</a>
+            <a href="blog/forex.html">Forex</a>
+            <a href="blog/opciones-binarias.html">Opciones Binarias</a>
+            <a href="blog/indices-sinteticos.html">Índices Sintéticos</a>
+            <a href="blog/ahorro.html">Ahorro e Inversión</a>
+          </div>
+        </div>
+        <a href="./blog/">Blog</a>
+        <a href="./deportes.html">Apuestas</a>
+        <a href="./about.html">Nosotros</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <button class="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <a href="./"><i class="fas fa-home"></i> Inicio</a>
+    <a href="blog/criptomonedas.html"><i class="fas fa-coins"></i> Criptomonedas</a>
+    <a href="blog/forex.html"><i class="fas fa-dollar-sign"></i> Forex</a>
+    <a href="blog/opciones-binarias.html"><i class="fas fa-chart-bar"></i> Opciones Binarias</a>
+    <a href="blog/indices-sinteticos.html"><i class="fas fa-chart-line"></i> Índices Sintéticos</a>
+    <a href="blog/ahorro.html"><i class="fas fa-piggy-bank"></i> Ahorro e Inversión</a>
+    <a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="./deportes.html"><i class="fas fa-futbol"></i> Apuestas Deportivas</a>
+    <a href="./about.html"><i class="fas fa-info-circle"></i> Nosotros</a>
+    <a href="./contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+  </div>
+  <div class="mobile-overlay"></div>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Trading Automático con IA</h1>
+      <p>Guía completa para crear, configurar y operar con bots de trading automatizados usando inteligencia artificial</p>
+    </div>
+  </section>
+
+  <section class="blog-single">
+    <div class="container">
+      <article>
+        <div class="article-meta">
+          <span><i class="far fa-calendar"></i> 19 de junio, 2026</span>
+          <span><i class="far fa-clock"></i> 12 minutos de lectura</span>
+          <span><i class="far fa-user"></i> Equipo Finanzas Inteligentes</span>
+        </div>
+
+        <div class="article-body">
+          <p>El trading automático ha pasado de ser una herramienta exclusiva de fondos de cobertura e instituciones financieras a estar al alcance de cualquier trader minorista. Gracias a plataformas modernas, APIs abiertas y la inteligencia artificial, hoy puedes crear tu propio bot de trading desde casa. Esta guía cubre todo lo que necesitas saber para empezar en 2026.</p>
+
+          <h2>¿Qué es el Trading Automático?</h2>
+          <p>El trading automático, también conocido como trading algorítmico o algorithmic trading, consiste en utilizar programas informáticos que ejecutan operaciones de compra y venta en los mercados financieros de forma autónoma, basándose en reglas predefinidas. A diferencia del trading manual, donde el trader analiza gráficos y toma decisiones emocionales, un bot opera sin intervención humana, siguiendo estrictamente su programación.</p>
+
+          <div class="highlight-box">
+            <h4><i class="fas fa-lightbulb"></i> Dato clave</h4>
+            <p>Se estima que más del 70% de las operaciones en los mercados financieros globales son ejecutadas por algoritmos y bots automatizados, no por humanos.</p>
+          </div>
+
+          <h3>Historia del Trading Algorítmico</h3>
+          <p>El trading algorítmico no es nuevo. Sus orígenes se remontan a la década de 1980, cuando los grandes fondos de inversión comenzaron a usar <strong>program trading</strong> en la Bolsa de Nueva York. Estos sistemas ejecutaban grandes volúmenes de órdenes basándose en fórmulas matemáticas simples. En los años 2000, la llegada de plataformas minoristas como <strong>MetaTrader 4</strong> (lanzado en 2005 por MetaQuotes) democratizó el acceso, permitiendo a traders individuales crear y ejecutar sus propios Expert Advisors (EAs) sin necesidad de ser programadores profesionales. La década de 2010 trajo consigo el auge de las criptomonedas y APIs abiertas como la de <strong>Binance</strong> (fundada en 2017 por Changpeng Zhao), lo que disparó la popularidad de los bots personalizados. Hoy, la inteligencia artificial y el machine learning están llevando el trading automatizado a un nuevo nivel, con sistemas capaces de aprender y adaptarse a las condiciones del mercado en tiempo real.</p>
+
+          <h2>Tipos de Trading Automatizado</h2>
+          <p>Existen diferentes enfoques para automatizar tus operaciones. Cada uno tiene sus ventajas y desventajas según tu perfil y conocimientos técnicos.</p>
+          <ul>
+            <li><strong>Bots de Señales (Copytrading):</strong> Plataformas como 3Commas o eToro permiten copiar automáticamente las operaciones de traders experimentados. No requieren programación.</li>
+            <li><strong>Expert Advisors (EAs) en MetaTrader:</strong> Programas escritos en MQL4 o MQL5 que se ejecutan directamente en la plataforma MetaTrader. Ideales para forex e índices.</li>
+            <li><strong>Bots Personalizados en Python:</strong> Con bibliotecas como ccxt, pandas y backtrader, puedes crear bots a medida que se conectan a cualquier exchange via API.</li>
+            <li><strong>Trading con IA y Machine Learning:</strong> Sistemas que utilizan redes neuronales (LSTM, Random Forest) para predecir precios y tomar decisiones basadas en patrones complejos.</li>
+            <li><strong>Grid Trading Bots:</strong> Estrategia que coloca órdenes de compra y venta en niveles predefinidos alrededor de un precio central. Ideal para mercados laterales.</li>
+            <li><strong>Arbitrage Bots:</strong> Aprovechan diferencias de precio de un mismo activo entre diferentes exchanges. Requieren baja latencia y alta velocidad de ejecución.</li>
+          </ul>
+
+          <h2>Plataformas para Trading Automático</h2>
+          <p>Estas son las plataformas más populares y confiables para ejecutar trading automatizado en 2026:</p>
+
+          <h3>MetaTrader 4 y 5</h3>
+          <p>Desarrollada por <strong><a href="https://www.metaquotes.net" target="_blank" rel="noopener">MetaQuotes</a></strong> (lanzada en 2005), MT4 y MT5 son las plataformas de trading más utilizadas del mundo. Permiten crear Expert Advisors (EAs) en lenguajes MQL4 y MQL5. Puedes operar en forex, índices, materias primas y más. <strong>Broker recomendado:</strong> <a href="https://www.icmarkets.com" target="_blank" rel="noopener">IC Markets</a> (regulado por ASIC desde 2007), conocido por sus bajos spreads y ejecución rápida, ideal para EAs.</p>
+
+          <h3>TradingView</h3>
+          <p><a href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView</a> (fundado en 2011) es la red social de trading más grande del mundo. Su lenguaje <strong>Pine Script</strong> permite crear estrategias automatizadas e indicadores personalizados. Se integra con brokers como <a href="https://www.oanda.com" target="_blank" rel="noopener">Oanda</a> y <a href="https://www.fxcm.com" target="_blank" rel="noopener">FXCM</a> para ejecución directa.</p>
+
+          <h3>3Commas</h3>
+          <p><a href="https://www.3commas.io" target="_blank" rel="noopener">3Commas</a> (fundado en 2017) es una de las plataformas de trading automatizado más populares para criptomonedas. Ofrece SmartTrade, DCA bots, Grid bots y copytrading. Es compatible con <strong>Binance</strong>, Coinbase, Kraken y más de 15 exchanges.</p>
+
+          <h3>Binance API</h3>
+          <p><a href="https://www.binance.com" target="_blank" rel="noopener">Binance</a> (fundado en 2017 por Changpeng Zhao) ofrece una de las APIs más completas y documentadas del mundo cripto. Su plan gratuito permite hasta 1200 solicitudes por minuto, suficiente para la mayoría de bots minoristas. Incluye endpoints para spot, futuros, margen y opciones.</p>
+
+          <h3>Deriv API</h3>
+          <p><a href="https://www.deriv.com" target="_blank" rel="noopener">Deriv</a> (fundado en 2000 como Binary.com) es la plataforma líder para trading de índices sintéticos y opciones digitales. Su API permite crear bots personalizados para operar con índices como Volatility 10, 25, 50, 75 y 100, así como Crash/Boom. Es muy popular en Latinoamérica.</p>
+
+          <h2>Cómo Crear un Bot desde Cero con Python</h2>
+          <p>Python es el lenguaje más usado para crear bots de trading por su sintaxis simple y su enorme ecosistema de bibliotecas financieras. A continuación, un ejemplo básico de un bot que obtiene datos de Binance y calcula una media móvil simple (SMA) para generar señales de compra/venta.</p>
+
+          <h3>Bibliotecas esenciales</h3>
+          <ul>
+            <li><strong>ccxt:</strong> Librería unificada para conectar con más de 100 exchanges cripto.</li>
+            <li><strong>pandas:</strong> Manipulación y análisis de datos estructurados.</li>
+            <li><strong>numpy:</strong> Operaciones numéricas y algebraicas.</li>
+            <li><strong>ta (Technical Analysis):</strong> Indicadores técnicos listos para usar.</li>
+            <li><strong>backtrader:</strong> Framework de backtesting robusto.</li>
+          </ul>
+
+          <pre><code># Ejemplo básico de bot con ccxt
+import ccxt
+import pandas as pd
+
+exchange = ccxt.binance()
+ohlcv = exchange.fetch_ohlcv('BTC/USDT', '1h', limit=100)
+df = pd.DataFrame(ohlcv, columns=['timestamp','open','high','low','close','volume'])
+df['sma_20'] = df['close'].rolling(20).mean()
+
+if df['close'].iloc[-1] > df['sma_20'].iloc[-1]:
+    print("Señal de COMPRA")
+else:
+    print("Señal de VENTA")</code></pre>
+
+          <h3>Conexión a la API de un Exchange</h3>
+          <p>Para operar realmente (no solo obtener datos), necesitas una API key y API secret de tu exchange. Guárdalos como variables de entorno por seguridad:</p>
+
+          <pre><code>import ccxt, os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+exchange = ccxt.binance({
+    'apiKey': os.getenv('BINANCE_API_KEY'),
+    'secret': os.getenv('BINANCE_SECRET'),
+    'enableRateLimit': True,
+})
+
+balance = exchange.fetch_balance()
+print(balance['free']['USDT'])</code></pre>
+
+          <h3>Backtesting</h3>
+          <p>Antes de arriesgar capital real, es fundamental realizar backtesting. La biblioteca <strong>backtrader</strong> te permite simular tu estrategia con datos históricos para evaluar su rentabilidad, drawdown y ratio Sharpe:</p>
+
+          <pre><code>import backtrader as bt
+
+class SmaCross(bt.SignalStrategy):
+    def __init__(self):
+        sma1, sma2 = bt.ind.SMA(period=10), bt.ind.SMA(period=30)
+        self.signal_add(bt.SIGNAL_LONG, bt.ind.CrossOver(sma1, sma2))
+
+cerebro = bt.Cerebro()
+cerebro.addstrategy(SmaCross)
+data = bt.feeds.YahooFinanceData(dataname='BTC-USD', fromdate='2024-01-01')
+cerebro.adddata(data)
+cerebro.broker.setcash(1000.0)
+print(f'Patrimonio final: ${cerebro.run()[0].broker.getvalue():.2f}')</code></pre>
+
+          <h3>Gestión de Riesgos</h3>
+          <p>Un bot sin gestión de riesgos es una bomba de tiempo. Incorpora siempre estas reglas:</p>
+          <ul>
+            <li><strong>Stop Loss:</strong> Define un límite de pérdida por operación (ej. 2% del capital).</li>
+            <li><strong>Take Profit:</strong> Establece un objetivo de ganancia realista.</li>
+            <li><strong>Tamaño de posición:</strong> Usa el modelo de Kelly Criterion o porcentaje fijo.</li>
+            <li><strong>Máximo drawdown:</strong> Detén el bot si las pérdidas acumuladas superan el 20%.</li>
+          </ul>
+
+          <h2>Estrategias Automatizadas Rentables</h2>
+          <p>Estas son las estrategias más utilizadas por traders automatizados en 2026:</p>
+
+          <h3>Grid Trading</h3>
+          <p>El grid trading consiste en colocar órdenes de compra y venta en niveles equidistantes alrededor de un precio central. Cuando el precio sube, se vende; cuando baja, se compra. <strong>Configuración típica:</strong> Grid spacing de 0.5%, 5 a 10 grids, operando en pares como BTC/USDT o ETH/USDT. Funciona mejor en mercados laterales o con baja volatilidad.</p>
+
+          <h3>DCA Bot (Dollar Cost Averaging)</h3>
+          <p>El DCA bot automatiza la compra periódica de un activo, eliminando la emoción de intentar "comprar en el mínimo". <strong>Configuración recomendada:</strong> Intervalos de 4 horas, take profit del 2%, con un safety order que incrementa la compra si el precio cae un 3%. Plataformas como 3Commas y Binance ofrecen DCA bots listos para usar.</p>
+
+          <h3>Martingala Automatizada para Índices Sintéticos</h3>
+          <p>Popular en Deriv, la estrategia de martingala duplica la inversión tras cada pérdida, buscando recuperar todo en una sola operación ganadora. <strong>Reglas estrictas:</strong> Multiplicador máximo de 2x, máximo 3 rondas consecutivas, operar solo en índices sintéticos como Volatility 75 (V75). Es una estrategia de alto riesgo que requiere un stop loss absoluto.</p>
+
+          <div class="highlight-box">
+            <h4><i class="fas fa-exclamation-triangle"></i> Advertencia importante</h4>
+            <p>La martingala es extremadamente peligrosa. Una racha de pérdidas puede liquidar tu cuenta rápidamente. Úsala solo si entiendes perfectamente los riesgos y con capital que puedas perder completamente.</p>
+          </div>
+
+          <h3>Smart Money Concepts (SMC) con IA</h3>
+          <p>El SMC es un enfoque que busca identificar la "huella" de los grandes actores institucionales (smart money) mediante detección de liquidez, órdenes de bloque y desequilibrios de mercado. Combinado con inteligencia artificial, los bots pueden analizar miles de velas por segundo para identificar patrones de manipulación. Requiere modelos entrenados con TensorFlow o PyTorch y datos históricos de alta calidad.</p>
+
+          <h3>Machine Learning: Redes LSTM y Random Forest</h3>
+          <p>Los modelos de machine learning están revolucionando el trading automatizado. Las redes <strong>LSTM (Long Short-Term Memory)</strong> son excelentes para predicción de series temporales financieras porque recuerdan patrones a largo plazo. El <strong>Random Forest</strong> es ideal para clasificar señales de compra/venta basándose en múltiples indicadores técnicos simultáneamente. Estos modelos se entrenan con datos históricos y se actualizan periódicamente para adaptarse a nuevas condiciones del mercado.</p>
+
+          <h2>Riesgos del Trading Automático</h2>
+          <p>El trading automatizado no es una máquina de hacer dinero. Existen riesgos reales que debes conocer antes de poner un bot en producción:</p>
+          <ul>
+            <li><strong>Fallos técnicos:</strong> Tu servidor puede caerse, la API del exchange puede fallar, tu conexión a internet puede interrumpirse. Siempre usa un VPS confiable (DigitalOcean, AWS, Linode) y monitorea tu bot 24/7.</li>
+            <li><strong>Slippage:</strong> En mercados volátiles, el precio ejecutado puede diferir del precio esperado. Esto es crítico en estrategias de scalping y arbitraje.</li>
+            <li><strong>Overfitting:</strong> Un bot que funciona perfectamente en backtesting puede fallar en mercado real porque fue "sobreoptimizado" para datos pasados. Valida siempre con datos fuera de muestra (out-of-sample).</li>
+            <li><strong>Riesgo de seguridad:</strong> Nunca compartas tus API keys. Usa 2FA en todas tus cuentas. Configura whitelist de IPs en el exchange para que solo tu servidor pueda hacer trading. No almacenes claves en texto plano.</li>
+            <li><strong>Riesgo de mercado:</strong> Un mercado que cambia de tendencia puede volver inútil tu estrategia. Revisa y actualiza tus bots periódicamente.</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4><i class="fas fa-shield-alt"></i> Gestión de capital</h4>
+            <p>Regla del 2%: nunca arriesgues más del 2% de tu capital total en una sola operación. Drawdown máximo recomendado: 20%. Si tu bot alcanza ese límite, detenlo y revisa la estrategia. El control emocional es la clave del éxito a largo plazo.</p>
+          </div>
+
+          <h2>Conclusión</h2>
+          <p>El trading automático es el futuro de los mercados financieros. La combinación de inteligencia artificial, APIs abiertas y plataformas accesibles ha democratizado una herramienta que antes solo estaba al alcance de instituciones. Sin embargo, no existe el bot perfecto ni la estrategia mágica. El éxito viene de la educación continua, el backtesting riguroso, la gestión disciplinada del riesgo y la capacidad de adaptarse cuando el mercado cambia.</p>
+          <p>Empieza pequeño. Crea un bot en papel, luego en backtesting, luego en una cuenta demo, y solo después de meses de resultados consistentes considera capital real. Nunca arriesgues más de lo que puedes permitirte perder. El mejor momento para empezar a aprender fue ayer. El segundo mejor momento es hoy.</p>
+        </div>
+
+        <div class="share-buttons">
+          <span style="font-weight:600;color:var(--text-light);font-size:0.9rem;">Compartir:</span>
+          <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="share-btn"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="#" class="share-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="share-btn"><i class="fas fa-link"></i> Copiar</a>
+        </div>
+
+        <div class="article-tags">
+          <a href="#">#TradingAutomático</a>
+          <a href="#">#Bots</a>
+          <a href="#">#IA</a>
+          <a href="#">#Python</a>
+          <a href="#">#MachineLearning</a>
+          <a href="#">#MetaTrader</a>
+          <a href="#">#Binance</a>
+        </div>
+
+        <div class="author-box">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div class="author-info">
+            <h4>Equipo Finanzas Inteligentes</h4>
+            <p>Somos un equipo de analistas financieros y escritores especializados en finanzas, trading e inversiones para Latinoamérica. Nuestro objetivo es brindar contenido claro, verificado y útil para tu libertad financiera.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h4>Herramientas recomendadas</h4>
+          <ul>
+            <li><a href="https://www.metaquotes.net" target="_blank" rel="noopener">MetaTrader 4/5</a></li>
+            <li><a href="https://www.3commas.io" target="_blank" rel="noopener">3Commas</a></li>
+            <li><a href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView</a></li>
+            <li><a href="https://www.binance.com" target="_blank" rel="noopener">Binance API</a></li>
+            <li><a href="https://www.deriv.com" target="_blank" rel="noopener">Deriv API</a></li>
+            <li><a href="https://www.icmarkets.com" target="_blank" rel="noopener">IC Markets</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget">
+          <h4>Artículos relacionados</h4>
+          <ul>
+            <li><a href="blog/forex.html">Forex para Principiantes</a></li>
+            <li><a href="blog/criptomonedas.html">Cómo Invertir en Criptomonedas</a></li>
+            <li><a href="blog/indices-sinteticos.html">Índices Sintéticos</a></li>
+            <li><a href="blog/opciones-binarias.html">Opciones Binarias</a></li>
+            <li><a href="blog/ahorro.html">Ahorro e Inversión</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-widget">
+          <h4>Síguenos</h4>
+          <div style="display:flex;gap:10px;">
+            <a href="#" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--text);"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--text);"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--text);"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--text);"><i class="fab fa-youtube"></i></a>
+            <a href="#" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);color:var(--text);"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./" class="logo"><div class="logo-icon"><i class="fas fa-chart-line"></i></div><div>Finanzas <span>Inteligentes</span><small>Tu guía financiera</small></div></a>
+          <p>Portal educativo independiente de finanzas para Colombia y Latinoamérica.</p>
+        </div>
+        <div>
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="blog/criptomonedas.html">Criptomonedas</a></li>
+            <li><a href="blog/forex.html">Forex</a></li>
+            <li><a href="blog/opciones-binarias.html">Opciones Binarias</a></li>
+            <li><a href="blog/indices-sinteticos.html">Índices Sintéticos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="blog/ahorro.html">Guía de Ahorro</a></li>
+            <li><a href="blog/ganar-dinero.html">Gana Dinero Online</a></li>
+            <li><a href="./blog/">Blog</a></li>
+            <li><a href="./about.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="./privacidad.html">Privacidad</a></li>
+            <li><a href="./cookies.html">Cookies</a></li>
+            <li><a href="./terminos.html">Términos</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="current-year">2026</span> Finanzas Inteligentes.</span>
+        <div class="footer-bottom-links">
+          <a href="./privacidad.html">Privacidad</a>
+          <a href="./cookies.html">Cookies</a>
+          <a href="./terminos.html">Términos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-consent">
+    <div class="container">
+      <p>Usamos cookies para mejorar tu experiencia. <a href="./cookies.html">Más info</a></p>
+      <div class="cookie-buttons">
+        <button class="btn btn-decline">Rechazar</button>
+        <button class="btn btn-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+  <button class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+  <script src="./js/script.js"></script>
+</body>
+</html>

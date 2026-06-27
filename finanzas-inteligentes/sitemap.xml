@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url><loc>https://finanzasinteligentes.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-etfs.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-forex.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-criptomonedas.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/metodos-ahorro-inteligente.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/15-formas-ingresos-extras.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/invertir-bolsa-colombia.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://finanzasinteligentes.com/entradas/index.html</loc><changefreq>weekly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://finanzasinteligentes.com/legal/privacidad.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
+  <url><loc>https://finanzasinteligentes.com/legal/cookies.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
+  <url><loc>https://finanzasinteligentes.com/legal/terminos.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
+  <url><loc>https://finanzasinteligentes.com/legal/contacto.html</loc><changefreq>monthly</changefreq><priority>0.40</priority></url>
+  <url><loc>https://finanzasinteligentes.com/404.html</loc><changefreq>never</changefreq><priority>0.10</priority></url>
+</urlset>
