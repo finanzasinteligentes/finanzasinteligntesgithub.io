@@ -41,6 +41,7 @@
   </script>
 </head>
 <body>
+  <div class="reading-progress" id="readingProgress"></div>
   <div class="top-bar">
     <div class="container">
       <span><i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> Colombia y Latinoamérica</span>
@@ -108,12 +109,21 @@
           <span><i class="far fa-calendar"></i> 19 de junio, 2026</span>
           <span><i class="far fa-clock"></i> 12 minutos de lectura</span>
           <span><i class="far fa-user"></i> Equipo Finanzas Inteligentes</span>
+          <span class="updated-badge"><i class="fas fa-sync-alt"></i> Actualizado Nov 2026</span>
         </div>
 
         <div class="featured-post-image" style="background-image:linear-gradient(rgba(10,22,40,0.7),rgba(10,22,40,0.7)),url('../images/indices.jpg');background-size:cover;background-position:center;height:400px;border-radius:12px;margin-bottom:2rem;"></div>
 
         <div class="article-body" id="article-body">
-          <h2>¿Qué son los Índices Sintéticos?</h2>
+          
+          <div class="stats-row">
+            <div class="stat-card"><span class="stat-number">24/7</span><span class="stat-label">Mercado abierto</span></div>
+            <div class="stat-card"><span class="stat-number">10+</span><span class="stat-label">Índices disponibles</span></div>
+            <div class="stat-card"><span class="stat-number">0.01</span><span class="stat-label">Lote mínimo</span></div>
+            <div class="stat-card"><span class="stat-number">Deriv</span><span class="stat-label">Plataforma principal</span></div>
+          </div>
+
+<h2><i class="fas fa-wave-square"></i> ¿Qué son los Índices Sintéticos?</h2>
           <p>Los índices sintéticos son activos financieros generados por algoritmos matemáticos que no dependen de los mercados reales. A diferencia del Bitcoin, el oro o el S&P 500, cuyo precio depende de la oferta y demanda real, los índices sintéticos son creados por <a href="https://deriv.com" target="_blank">Deriv</a> (antes Binary.com) utilizando un generador de números aleatorios con volatilidad constante. Esto significa que se mueven de forma predecible en términos de comportamiento estadístico, sin depender de eventos externos como guerras, decisiones de bancos centrales o cierres de mercado.</p>
 
           <div class="highlight-box">
@@ -148,16 +158,29 @@
           <h2>Ventajas vs Trading Tradicional</h2>
           <p>Los índices sintéticos ofrecen ventajas significativas frente al trading tradicional: operan 24/7 sin interrupciones, la volatilidad es predecible y constante, no existen gaps de precio entre sesiones, y son perfectos para bots de trading automatizado. Además, al no depender de mercados reales, no hay riesgo de manipulación de mercado ni noticias de último momento que afecten tus posiciones. Esto los convierte en la herramienta ideal para traders algorítmicos y para quienes buscan consistencia.</p>
 
-          <h2>Conclusión</h2>
+          
+          <div class="info-box tip">
+            <i class="fas fa-lightbulb"></i>
+            <div><strong>Consejo:</strong> Los índices sintéticos <strong>no dependen de factores externos</strong> como noticias económicas. Ideal para practicar trading técnico puro.</div>
+          </div>
+
+          <h2><i class="fas fa-flag-checkered"></i> Conclusión</h2>
           <p>Los índices sintéticos de Deriv representan una innovación revolucionaria en el mundo del trading. Su disponibilidad 24/7, volatilidad constante y predictibilidad estadística los convierten en una herramienta poderosa tanto para principiantes como para traders experimentados. Sin embargo, requieren disciplina, gestión de riesgo y una estrategia probada. Si estás buscando una alternativa a los mercados tradicionales, los índices sintéticos son una opción que vale la pena explorar.</p>
+        </div>
+
+        
+        <div class="cta-box">
+          <h3><i class="fas fa-robot"></i> ¿Quieres automatizar tu trading?</h3>
+          <p>SNIPER LEAN EA opera automáticamente en MetaTrader 5. Prueba gratuita por 30 días, sin compromiso.</p>
+          <a href="https://t.me/DineroOnine" target="_blank" class="btn btn-primary"><i class="fab fa-telegram"></i> Solicitar Prueba Gratis</a>
         </div>
 
         <div class="share-buttons">
           <span style="font-weight:600;color:var(--text-light);font-size:0.9rem;">Compartir:</span>
-          <a href="#" class="share-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#" class="share-btn"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="#" class="share-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="#" class="share-btn"><i class="fas fa-link"></i> Copiar</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://finanzasinteligentes.org/blog/indices-sinteticos.html" target="_blank" class="share-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text=Índices Sintéticos: Guía Completa para Operar en Deriv 2026&url=https://finanzasinteligentes.org/blog/indices-sinteticos.html" target="_blank" class="share-btn"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="https://api.whatsapp.com/send?text=Índices Sintéticos: Guía Completa para Operar en Deriv 2026 https://finanzasinteligentes.org/blog/indices-sinteticos.html" target="_blank" class="share-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="share-btn" onclick="navigator.clipboard.writeText('https://finanzasinteligentes.org/blog/indices-sinteticos.html');this.innerHTML='<i class=&quot;fas fa-check&quot;></i> Copiado';return false;"><i class="fas fa-link"></i> Copiar</a>
         </div>
 
         <div class="article-tags">
@@ -277,5 +300,15 @@
   </div>
   <button class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
   <script src="../js/script.js"></script>
+
+  <script>
+  window.addEventListener('scroll', function() {
+    var prog = document.getElementById('readingProgress');
+    if(prog){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (window.scrollY / h * 100) + '%';
+    }
+  });
+  </script>
 </body>
 </html>

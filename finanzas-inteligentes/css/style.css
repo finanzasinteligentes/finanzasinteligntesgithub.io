@@ -441,11 +441,24 @@ h1, h2, h3, h4, h5, h6 {
 .blog-card-image {
   height: 200px;
   background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   position: relative;
+  overflow: hidden;
+}
+.blog-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(10,22,40,0.7), transparent);
+  pointer-events: none;
 }
 .blog-card-image .category-badge {
   position: absolute;
@@ -1467,4 +1480,171 @@ article h1 {
 }
 @media (max-width: 480px) {
   .livescore-iframe { height: 350px; }
+}
+
+/* ============================================
+   ARTICLE ENHANCEMENTS
+   ============================================ */
+
+/* Table of Contents */
+.toc-box {
+  background: var(--bg-alt);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 2rem;
+}
+.toc-box h4 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toc-box ol {
+  margin: 0;
+  padding-left: 20px;
+  counter-reset: toc;
+  list-style: none;
+}
+.toc-box ol li {
+  counter-increment: toc;
+  margin-bottom: 6px;
+}
+.toc-box ol li::before {
+  content: counter(toc) ".";
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 6px;
+}
+.toc-box ol li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.toc-box ol li a:hover {
+  color: var(--accent);
+}
+
+/* Info boxes */
+.info-box {
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.info-box i {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.info-box.tip {
+  background: rgba(0,200,120,0.08);
+  border-left: 4px solid #00c878;
+}
+.info-box.tip i { color: #00c878; }
+.info-box.warning {
+  background: rgba(255,180,0,0.08);
+  border-left: 4px solid #ffb400;
+}
+.info-box.warning i { color: #ffb400; }
+.info-box.info {
+  background: rgba(100,160,255,0.08);
+  border-left: 4px solid #64a0ff;
+}
+.info-box.info i { color: #64a0ff; }
+
+/* CTA Box */
+.cta-box {
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  margin: 2rem 0;
+}
+.cta-box h3 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.cta-box p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+.cta-box .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Key stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: var(--bg-alt);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.stat-card .stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+}
+.stat-card .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* Section headings with icons */
+.article-body h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(212,175,55,0.2);
+  margin-top: 2.5rem;
+}
+.article-body h2 i {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+/* Updated date badge */
+.updated-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,200,120,0.1);
+  color: #00c878;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  z-index: 9999;
+  transition: width 0.1s;
 }
