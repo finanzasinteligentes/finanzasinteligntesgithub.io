@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url><loc>https://finanzasinteligentes.com/</loc><changefreq>daily</changefreq><priority>1.00</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-etfs.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-forex.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/guia-completa-criptomonedas.html</loc><changefreq>weekly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/metodos-ahorro-inteligente.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/15-formas-ingresos-extras.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/invertir-bolsa-colombia.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://finanzasinteligentes.com/entradas/index.html</loc><changefreq>weekly</changefreq><priority>0.70</priority></url>
-  <url><loc>https://finanzasinteligentes.com/legal/privacidad.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
-  <url><loc>https://finanzasinteligentes.com/legal/cookies.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
-  <url><loc>https://finanzasinteligentes.com/legal/terminos.html</loc><changefreq>monthly</changefreq><priority>0.30</priority></url>
-  <url><loc>https://finanzasinteligentes.com/legal/contacto.html</loc><changefreq>monthly</changefreq><priority>0.40</priority></url>
-  <url><loc>https://finanzasinteligentes.com/404.html</loc><changefreq>never</changefreq><priority>0.10</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://finanzasinteligentes.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finanzasinteligentes.org/trading-automatico.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://finanzasinteligentes.org/deportes.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finanzasinteligentes.org/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://finanzasinteligentes.org/contacto.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- Blog Articles -->
+  <url><loc>https://finanzasinteligentes.org/blog/indices-sinteticos-deriv.html</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/vivir-del-trading-colombia.html</loc><lastmod>2026-11-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/metatrader-5-guia.html</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/criptomonedas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/forex.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/opciones-binarias.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/indices-sinteticos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/ganar-dinero.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/ahorro.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://finanzasinteligentes.org/blog/materias-primas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Legal -->
+  <url><loc>https://finanzasinteligentes.org/privacidad.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://finanzasinteligentes.org/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://finanzasinteligentes.org/terminos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

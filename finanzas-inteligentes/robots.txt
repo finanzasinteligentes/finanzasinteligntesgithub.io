@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
 
-Sitemap: https://finanzasinteligentes.com/sitemap.xml
-
-# Crawl delay for server performance
-Crawl-delay: 5
+Sitemap: https://finanzasinteligentes.org/sitemap.xml
