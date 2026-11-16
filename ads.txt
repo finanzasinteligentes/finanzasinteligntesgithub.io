@@ -1,0 +1,4 @@
+# ads.txt para finanzasinteligentes.org
+# Reemplaza PUBLISHER_ID con tu ID real de Google AdSense (pub-XXXXXXXXXXXXXXXX)
+# Lo encuentras en AdSense > Cuenta > Información de la cuenta
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

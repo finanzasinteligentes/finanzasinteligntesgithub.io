@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /web/
+Disallow: /legal/
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://finanzasinteligentes.org/sitemap.xml
