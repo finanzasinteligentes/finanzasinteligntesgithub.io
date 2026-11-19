@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a3828"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#d4af37" font-family="Arial,sans-serif" font-size="52" font-weight="bold">AHORRO</text>
+  <text x="400" y="175" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="26">Métodos de Ahorro Inteligente</text>
+  <text x="400" y="210" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="20">Regla 50/30/20 · CDT · Fondos · Nu · Lulo</text>
+  <!-- Piggy bank icon simplified -->
+  <g transform="translate(355,245)">
+    <ellipse cx="45" cy="40" rx="45" ry="35" fill="none" stroke="#d4af37" stroke-width="3"/>
+    <circle cx="65" cy="30" r="4" fill="#d4af37"/>
+    <rect x="25" y="10" width="20" height="8" fill="#d4af37" rx="3"/>
+    <line x1="15" y1="75" x2="20" y2="85" stroke="#d4af37" stroke-width="3"/>
+    <line x1="70" y1="75" x2="75" y2="85" stroke="#d4af37" stroke-width="3"/>
+  </g>
+  <text x="400" y="395" text-anchor="middle" fill="#4a5568" font-family="Arial,sans-serif" font-size="12">finanzasinteligentes.org</text>
+</svg>

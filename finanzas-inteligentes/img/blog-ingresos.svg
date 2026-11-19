@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#3c1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#d4af37" font-family="Arial,sans-serif" font-size="44" font-weight="bold">INGRESOS EXTRAS</text>
+  <text x="400" y="175" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="26">15 Formas de Generar Dinero</text>
+  <text x="400" y="210" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="20">Freelancing · Afiliados · Contenido · Cursos</text>
+  <!-- Money/dollar signs -->
+  <g transform="translate(340,240)">
+    <text x="0" y="50" fill="#d4af37" font-family="Arial,sans-serif" font-size="50" opacity="0.4">$</text>
+    <text x="40" y="40" fill="#d4af37" font-family="Arial,sans-serif" font-size="60" opacity="0.7">$</text>
+    <text x="85" y="50" fill="#d4af37" font-family="Arial,sans-serif" font-size="50" opacity="1">$</text>
+  </g>
+  <text x="400" y="395" text-anchor="middle" fill="#4a5568" font-family="Arial,sans-serif" font-size="12">finanzasinteligentes.org</text>
+</svg>

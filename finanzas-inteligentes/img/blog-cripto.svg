@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a1a3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#d4af37" font-family="Arial,sans-serif" font-size="56" font-weight="bold">CRIPTO</text>
+  <text x="400" y="175" text-anchor="middle" fill="#ffffff" font-family="Arial,sans-serif" font-size="26">Guía Completa de Criptomonedas</text>
+  <text x="400" y="210" text-anchor="middle" fill="#94a3b8" font-family="Arial,sans-serif" font-size="20">Bitcoin · Ethereum · DeFi · Stablecoins</text>
+  <!-- Bitcoin symbol -->
+  <circle cx="400" cy="300" r="45" fill="none" stroke="#d4af37" stroke-width="3"/>
+  <text x="400" y="318" text-anchor="middle" fill="#d4af37" font-family="Arial,sans-serif" font-size="48" font-weight="bold">₿</text>
+  <text x="400" y="395" text-anchor="middle" fill="#4a5568" font-family="Arial,sans-serif" font-size="12">finanzasinteligentes.org</text>
+</svg>
