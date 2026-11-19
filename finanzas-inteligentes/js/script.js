@@ -84,60 +84,76 @@ function initTicker() {
   var track = document.querySelector('.ticker-track');
   if (!track) return;
 
-  // Static items always shown
+  // Fallback prices shown immediately while APIs load
+  var fallbacks = {
+    'btc-ticker':  { price: 94200,  change: 1.2,   label: 'BTC/USD' },
+    'eth-ticker':  { price: 3480,   change: 0.8,   label: 'ETH/USD' },
+    'sol-ticker':  { price: 198,    change: 2.1,   label: 'SOL/USD' },
+    'xrp-ticker':  { price: 2.18,   change: -0.4,  label: 'XRP/USD' },
+    'ada-ticker':  { price: 0.92,   change: 1.5,   label: 'ADA/USD' },
+    'dot-ticker':  { price: 7.80,   change: 0.6,   label: 'DOT/USD' },
+    'link-ticker': { price: 15.40,  change: 1.1,   label: 'LINK/USD'},
+    'eur-ticker':  { price: 0.9230, change: null,  label: 'EUR/USD', isRate: true },
+    'cop-ticker':  { price: 4150,   change: null,  label: 'COP/USD', isRate: true },
+    'ars-ticker':  { price: 1050,   change: null,  label: 'ARS/USD', isRate: true },
+    'mxn-ticker':  { price: 17.20,  change: null,  label: 'MXN/USD', isRate: true },
+    'brl-ticker':  { price: 5.75,   change: null,  label: 'BRL/USD', isRate: true },
+    'oro-ticker':  { price: 2650,   change: 0.3,   label: 'ORO/USD' }
+  };
+
+  // Build ticker HTML with fallback values immediately
   var staticHTML = '';
-  var symbols = [
-    { label: 'BTC/USD', id: 'btc-ticker' },
-    { label: 'ETH/USD', id: 'eth-ticker' },
-    { label: 'SOL/USD', id: 'sol-ticker' },
-    { label: 'XRP/USD', id: 'xrp-ticker' },
-    { label: 'ADA/USD', id: 'ada-ticker' },
-    { label: 'DOT/USD', id: 'dot-ticker' },
-    { label: 'LINK/USD', id: 'link-ticker' },
-    { label: 'EUR/USD', id: 'eur-ticker' },
-    { label: 'COP/USD', id: 'cop-ticker' },
-    { label: 'ARS/USD', id: 'ars-ticker' },
-    { label: 'MXN/USD', id: 'mxn-ticker' },
-    { label: 'BRL/USD', id: 'brl-ticker' },
-    { label: 'ORO/USD', id: 'oro-ticker' }
-  ];
-  symbols.forEach(function (s) {
-    staticHTML += '<div class="ticker-item"><span class="ticker-symbol">' + s.label + '</span><span class="ticker-price" id="' + s.id + '">---</span><span class="ticker-change" id="' + s.id + '-chg"></span></div>';
+  Object.keys(fallbacks).forEach(function(id) {
+    var s = fallbacks[id];
+    var priceStr = s.isRate ? '$' + s.price.toFixed(2) : '$' + s.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var chgStr = '';
+    var chgClass = '';
+    if (s.change !== null && s.change !== undefined) {
+      var arrow = s.change >= 0 ? '▲' : '▼';
+      chgStr = arrow + ' ' + Math.abs(s.change).toFixed(2) + '%';
+      chgClass = s.change >= 0 ? 'up' : 'down';
+    }
+    staticHTML += '<div class="ticker-item"><span class="ticker-symbol">' + s.label + '</span><span class="ticker-price" id="' + id + '">' + priceStr + '</span><span class="ticker-change ' + chgClass + '" id="' + id + '-chg">' + chgStr + '</span></div>';
   });
 
-  // Update prices from CoinGecko
+  // Render immediately with fallback data
+  track.innerHTML = staticHTML + staticHTML;
+
+  // Update prices from CoinGecko (best-effort, silent fail)
   function updatePrices() {
     fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,cardano,polkadot,chainlink,pax-gold&vs_currencies=usd&include_24hr_change=true')
-      .then(function (r) { return r.json(); })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
-        setTicker('btc-ticker', d.bitcoin.usd, d.bitcoin.usd_24h_change);
-        setTicker('eth-ticker', d.ethereum.usd, d.ethereum.usd_24h_change);
-        setTicker('sol-ticker', d.solana.usd, d.solana.usd_24h_change);
-        setTicker('ada-ticker', d.cardano.usd, d.cardano.usd_24h_change);
-        setTicker('xrp-ticker', d.ripple.usd, d.ripple.usd_24h_change);
-        setTicker('dot-ticker', d.polkadot.usd, d.polkadot.usd_24h_change);
-        setTicker('link-ticker', d.chainlink.usd, d.chainlink.usd_24h_change);
+        if (d.bitcoin)   setTicker('btc-ticker',  d.bitcoin.usd,   d.bitcoin.usd_24h_change);
+        if (d.ethereum)  setTicker('eth-ticker',  d.ethereum.usd,  d.ethereum.usd_24h_change);
+        if (d.solana)    setTicker('sol-ticker',  d.solana.usd,    d.solana.usd_24h_change);
+        if (d.cardano)   setTicker('ada-ticker',  d.cardano.usd,   d.cardano.usd_24h_change);
+        if (d.ripple)    setTicker('xrp-ticker',  d.ripple.usd,    d.ripple.usd_24h_change);
+        if (d.polkadot)  setTicker('dot-ticker',  d.polkadot.usd,  d.polkadot.usd_24h_change);
+        if (d.chainlink) setTicker('link-ticker', d.chainlink.usd, d.chainlink.usd_24h_change);
         if (d['pax-gold']) setTicker('oro-ticker', d['pax-gold'].usd, d['pax-gold'].usd_24h_change);
       })
-      .catch(function () { /* silent fail */ });
+      .catch(function () { /* Keep fallback values on failure */ });
 
     // Forex rates
     fetch('https://api.exchangerate-api.com/v4/latest/USD')
-      .then(function (r) { return r.json(); })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (d) {
-        setTicker('eur-ticker', d.rates.EUR, null, true);
-        setTicker('cop-ticker', d.rates.COP, null, true);
-        setTicker('ars-ticker', d.rates.ARS, null, true);
-        setTicker('mxn-ticker', d.rates.MXN, null, true);
-        setTicker('brl-ticker', d.rates.BRL, null, true);
+        if (d.rates) {
+          setTicker('eur-ticker', d.rates.EUR, null, true);
+          setTicker('cop-ticker', d.rates.COP, null, true);
+          setTicker('ars-ticker', d.rates.ARS, null, true);
+          setTicker('mxn-ticker', d.rates.MXN, null, true);
+          setTicker('brl-ticker', d.rates.BRL, null, true);
+        }
       })
-      .catch(function () { /* silent fail */ });
+      .catch(function () { /* Keep fallback values on failure */ });
   }
 
   function setTicker(id, price, change, isRate) {
     var el = document.getElementById(id);
     var chgEl = document.getElementById(id + '-chg');
-    if (!el) return;
+    if (!el || price === undefined || price === null) return;
     if (isRate) {
       el.textContent = '$' + price.toFixed(2);
       if (chgEl) chgEl.textContent = '';
@@ -151,10 +167,9 @@ function initTicker() {
     }
   }
 
-  // Render static items + spacer
-  track.innerHTML = staticHTML + staticHTML;
-  updatePrices();
-  setInterval(updatePrices, 60000);
+  // Fetch live prices (delayed 1s to let page render first)
+  setTimeout(updatePrices, 1000);
+  setInterval(updatePrices, 120000);
 }
 
 /* ============================================
