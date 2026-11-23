@@ -66,6 +66,8 @@
   <meta name="twitter:image" content="https://finanzasinteligentes.org/finanzas-inteligentes/images/hero-bg.jpg">
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtXK-F2qC0s.woff2" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
   <link rel="stylesheet" href="css/style.css">
@@ -147,7 +149,7 @@
         <div class="hero-content">
           <!-- Brand Logo -->
           <div class="hero-logo">
-            <img src="images/hero-bg.jpg" alt="Finanzas Inteligentes Logo" width="180" height="120" style="max-width:180px;border-radius:12px;margin-bottom:20px;box-shadow:0 4px 20px rgba(16,185,129,0.3);">
+            <img src="images/hero-bg-small.jpg" srcset="images/hero-bg-small.jpg 360w, images/hero-bg.jpg 1200w" sizes="180px" alt="Finanzas Inteligentes Logo" width="180" height="120" style="max-width:180px;border-radius:12px;margin-bottom:20px;box-shadow:0 4px 20px rgba(16,185,129,0.3);">
           </div>
           <h1>Tu futuro financiero <span>comienza aquí</span></h1>
           <p>Aprende sobre criptomonedas, forex, opciones binarias, índices sintéticos, <strong>trading automático con IA</strong> y finanzas personales. Contenido verificado y diseñado para Colombia y Latinoamérica, desde principiante hasta avanzado.</p>
@@ -265,7 +267,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="fade-in">
         <div>
           <div style="border-radius:12px;overflow:hidden;margin-bottom:24px;border:1px solid rgba(212,175,55,0.2);">
-            <img loading="lazy" decoding="async" src="images/sniper-lean-dashboard.jpg" alt="Dashboard de SNIPER LEAN EA operando en MetaTrader 5 con escáner de soportes y resistencias" width="1280" height="720" style="width:100%;height:auto;display:block;">
+            <img loading="lazy" decoding="async" src="images/sniper-lean-dashboard-opt.jpg" srcset="images/sniper-lean-dashboard-opt.jpg 960w, images/sniper-lean-dashboard.jpg 1280w" sizes="(max-width:768px) 100vw, 554px" alt="Dashboard de SNIPER LEAN EA operando en MetaTrader 5 con escáner de soportes y resistencias" width="1280" height="720" style="width:100%;height:auto;display:block;">
           </div>
           <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
             <i class="fas fa-satellite-dish" style="color:#d4af37;font-size:1.3rem;margin-top:4px;"></i>
@@ -312,10 +314,13 @@
           <a href="trading-automatico.html" style="display:block;color:#d4af37;font-size:0.88rem;margin-top:12px;text-decoration:none;">Ver todas las características <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <!-- Video YouTube -->
+      <!-- Video YouTube (facade — carga iframe solo al click) -->
       <div style="max-width:720px;margin:32px auto 0;border-radius:12px;overflow:hidden;border:1px solid rgba(212,175,55,0.2);" class="fade-in">
-        <div style="position:relative;padding-bottom:56.25%;height:0;">
-          <iframe src="https://www.youtube.com/embed/d7_2F12f7G0" title="SNIPER LEAN PRO" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        <div class="yt-facade" data-vid="d7_2F12f7G0" style="position:relative;padding-bottom:56.25%;height:0;cursor:pointer;background:#000;" onclick="(function(el){var id=el.dataset.vid;var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/'+id+'?autoplay=1';f.title='SNIPER LEAN PRO';f.frameBorder='0';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;f.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;';el.innerHTML='';el.appendChild(f);})(this)">
+          <img src="https://i.ytimg.com/vi/d7_2F12f7G0/hqdefault.jpg" alt="SNIPER LEAN PRO — ver video" width="480" height="360" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+            <svg viewBox="0 0 68 48" width="68" height="48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
+          </div>
         </div>
         <p style="text-align:center;color:#8892a4;font-size:0.85rem;padding:12px 0 8px;"><i class="fab fa-youtube" style="color:#d4af37;margin-right:6px;"></i>Mira el EA en acción — Únete al grupo de pruebas</p>
       </div>

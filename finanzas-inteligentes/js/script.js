@@ -37,7 +37,17 @@ function initHamburger() {
 /* —— Header Scroll —— */
 function initHeaderScroll() {
   var h = document.querySelector('.header');
-  if (h) window.addEventListener('scroll', function () { h.classList.toggle('scrolled', window.scrollY > 20); });
+  if (!h) return;
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        h.classList.toggle('scrolled', window.scrollY > 20);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 /* —— Back to Top —— */
@@ -80,10 +90,15 @@ function initFadeAnimations() {
       }
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -10px 0px' });
-  els.forEach(function (el) {
-    var rect = el.getBoundingClientRect();
-    // Si ya es visible en el viewport inicial, activar sin animación
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+  // Batch: leer todos los rects primero (sin mezclar con escrituras DOM)
+  var vh = window.innerHeight;
+  var rects = Array.prototype.map.call(els, function (el) {
+    return el.getBoundingClientRect();
+  });
+  // Luego escribir — sin reflow forzado por mezcla lectura/escritura
+  els.forEach(function (el, i) {
+    var rect = rects[i];
+    if (rect.top < vh && rect.bottom > 0) {
       el.classList.add('visible');
     } else {
       obs.observe(el);
